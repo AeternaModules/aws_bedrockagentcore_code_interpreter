@@ -1,7 +1,3 @@
-output "bedrockagentcore_code_interpreters_id" {
-  description = "Map of id values across all bedrockagentcore_code_interpreters, keyed the same as var.bedrockagentcore_code_interpreters"
-  value       = { for k, v in aws_bedrockagentcore_code_interpreter.bedrockagentcore_code_interpreters : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "bedrockagentcore_code_interpreters_certificate" {
   description = "Map of certificate values across all bedrockagentcore_code_interpreters, keyed the same as var.bedrockagentcore_code_interpreters"
   value       = { for k, v in aws_bedrockagentcore_code_interpreter.bedrockagentcore_code_interpreters : k => v.certificate if v.certificate != null && length(v.certificate) > 0 }
